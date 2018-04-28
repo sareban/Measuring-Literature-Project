@@ -11,11 +11,11 @@ labels = []
 
 with open('data/poems_data.csv') as csv_file:
     readCSV = csv.reader(csv_file)
-    i = 0
+    # i = 0
     for row in readCSV:
-        if i > 9:
-            break
-        i += 1
+        # if i > 9:
+        #     break
+        # i += 1
         hemistichs.append(row[COLUMN_HEMISTICH_TEXT])
         labels.append(row[COLUMN_POET])
 
