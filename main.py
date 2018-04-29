@@ -2,8 +2,8 @@ import csv
 from classifier.classical_classifiers import RFClassifier
 from utility.feature_extractor import TextFeature
 
-column_names = ["id", "poem_number", "poet_number", "hemistich_number", "verse_number", "hemistich_text", "?"]
-COLUMN_POET = 2
+column_names = ["id", "poet_number", "poem_number", "hemistich_number", "verse_number", "hemistich_text", "?"]
+COLUMN_POET = 1
 COLUMN_HEMISTICH_TEXT = 5
 
 hemistichs = []
