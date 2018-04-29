@@ -2,6 +2,8 @@ import csv
 from classifier.classical_classifiers import RFClassifier
 from utility.feature_extractor import TextFeature
 
+from sklearn.model_selection import cross_val_score
+
 column_names = ["id", "poet_number", "poem_number", "hemistich_number", "verse_number", "hemistich_text", "?"]
 COLUMN_POET = 1
 COLUMN_HEMISTICH_TEXT = 5
@@ -30,6 +32,10 @@ y = labels
 rf_classifier = RFClassifier(X, y)
 
 rf_classifier.model.fit(rf_classifier.X, rf_classifier.Y)
+
+print("accuracy")
+print(cross_val_score(rf_classifier.model, rf_classifier.X, rf_classifier.Y, scoring='accuracy'))
+
 
 with open("data/output/features_importance.csv", "w") as output:
     COLUMN_FEATURE = 'feature'
