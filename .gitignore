@@ -1,3 +1,6 @@
 ~$poems.xlsx
 .ipynb_checkpoints/Literature Project-checkpoint.ipynb
 poems.csv
+utility/__pycache__/__init__.cpython-35.pyc
+*.pyc
+data/poems - Copie.xlsx
